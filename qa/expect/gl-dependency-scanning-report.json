@@ -1,0 +1,1357 @@
+{
+  "version": "2.3",
+  "vulnerabilities": [
+    {
+      "category": "dependency_scanning",
+      "name": "Deserialization of Untrusted Data",
+      "message": "Deserialization of Untrusted Data in com.fasterxml.jackson.core/jackson-databind",
+      "description": "FasterXML jackson-databind allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the readValue method of the ObjectMapper, bypassing a blacklist that is ineffective if the c3p0 libraries are available in the classpath.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:0a647516-66dc-4381-9da7-601193d849e6",
+      "severity": "Critical",
+      "solution": "Upgrade to versions 2.8.11.1, 2.9.5 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-0a647516-66dc-4381-9da7-601193d849e6",
+          "value": "0a647516-66dc-4381-9da7-601193d849e6",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2018-7489.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2018-7489",
+          "value": "CVE-2018-7489",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-7489"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html"
+        },
+        {
+          "url": "http://www.securityfocus.com/bid/103203"
+        },
+        {
+          "url": "http://www.securitytracker.com/id/1040693"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/1931"
+        },
+        {
+          "url": "https://security.netapp.com/advisory/ntap-20180328-0001/"
+        },
+        {
+          "url": "https://www.debian.org/security/2018/dsa-4190"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "`SubTypeValidator.java` in FasterXML jackson-databind mishandles default typing when ehcache is used (because of `net.sf.ehcache.transaction.manager.DefaultTransactionManagerLookup`), leading to remote code execution.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:2e639b4f-f53c-4a3e-a91f-d9731e93c4bc",
+      "severity": "Critical",
+      "solution": "Upgrade to versions 2.7.9.6, 2.8.11.4, 2.9.9.2 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-2e639b4f-f53c-4a3e-a91f-d9731e93c4bc",
+          "value": "2e639b4f-f53c-4a3e-a91f-d9731e93c4bc",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-14379.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-14379",
+          "value": "CVE-2019-14379",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14379"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2387"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-14379"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Deserialization of Untrusted Data",
+      "message": "Deserialization of Untrusted Data in com.fasterxml.jackson.core/jackson-databind",
+      "description": "FasterXML jackson-databind allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the `readValue` method of the `ObjectMapper`, bypassing a blacklist that is ineffective if the Spring libraries are available in the classpath.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:3f9723f9-2899-414a-85c5-5bf83db14382",
+      "severity": "Critical",
+      "solution": "Upgrade to versions 2.8.11, 2.9.4 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-3f9723f9-2899-414a-85c5-5bf83db14382",
+          "value": "3f9723f9-2899-414a-85c5-5bf83db14382",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2017-17485.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-17485",
+          "value": "CVE-2017-17485",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17485"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://www.securityfocus.com/archive/1/archive/1/541652/100/0/threaded"
+        },
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/1855"
+        },
+        {
+          "url": "https://github.com/irsl/jackson-rce-via-spel/"
+        },
+        {
+          "url": "https://security.netapp.com/advisory/ntap-20180201-0003/"
+        },
+        {
+          "url": "https://www.debian.org/security/2018/dsa-4114"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint and the service has the `commons-dbcp` jar in the classpath, and an attacker can find an RMI service endpoint to access, it is possible to make the service execute a malicious payload. This issue exists because of `org.apache.commons.dbcp.datasources.SharedPoolDataSource` and `org.apache.commons.dbcp.datasources.PerUserPoolDataSource` mishandling.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:523eaaba-031d-4454-9cc9-d6b0d6753d40",
+      "severity": "Critical",
+      "solution": "Upgrade to version 2.9.10.1 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-523eaaba-031d-4454-9cc9-d6b0d6753d40",
+          "value": "523eaaba-031d-4454-9cc9-d6b0d6753d40",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-16942.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-16942",
+          "value": "CVE-2019-16942",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16942"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16942"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint and the service has the p6spy jar in the classpath, and an attacker can find an RMI service endpoint to access, it is possible to make the service execute a malicious payload. This issue exists because of `com.p6spy.engine.spy.P6DataSource` mishandling.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:5ee60948-63a0-47a6-8807-378df68649fe",
+      "severity": "Critical",
+      "solution": "Upgrade to version 2.9.10.1 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-5ee60948-63a0-47a6-8807-378df68649fe",
+          "value": "5ee60948-63a0-47a6-8807-378df68649fe",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-16943.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-16943",
+          "value": "CVE-2019-16943",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16943"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16943"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. It is related to `com.zaxxer.hikari.HikariDataSource`. This is a different vulnerability than CVE-2019-14540.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:97c5173b-cc37-461f-9dd2-399c1f3f474c",
+      "severity": "Critical",
+      "solution": "Upgrade to version 2.9.10 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-97c5173b-cc37-461f-9dd2-399c1f3f474c",
+          "value": "97c5173b-cc37-461f-9dd2-399c1f3f474c",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-16335.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-16335",
+          "value": "CVE-2019-16335",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16335"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16335"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. It is related to `com.zaxxer.hikari.HikariConfig`.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:dccd96de-e4ca-4391-bb31-64a1f1c97904",
+      "severity": "Critical",
+      "solution": "Upgrade to version 2.9.10 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-dccd96de-e4ca-4391-bb31-64a1f1c97904",
+          "value": "dccd96de-e4ca-4391-bb31-64a1f1c97904",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-14540.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-14540",
+          "value": "CVE-2019-14540",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14540"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-14540"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. It is related to `net.sf.ehcache.hibernate.EhcacheJtaTransactionManagerLookup`.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:fb4fd9b5-f692-49b5-9cf4-ca82958f2a53",
+      "severity": "Critical",
+      "solution": "Upgrade to version 2.9.10 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-fb4fd9b5-f692-49b5-9cf4-ca82958f2a53",
+          "value": "fb4fd9b5-f692-49b5-9cf4-ca82958f2a53",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-17267.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-17267",
+          "value": "CVE-2019-17267",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17267"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2460"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17267"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Improper Input Validation",
+      "message": "Improper Input Validation in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint and the service has the `apache-log4j-extra` in the classpath, and an attacker can provide a JNDI service to access, it is possible to make the service execute a malicious payload.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:fc79306c-cbe4-47bd-80a9-d2610a560930",
+      "severity": "Critical",
+      "solution": "Upgrade to version 2.9.10.1 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-fc79306c-cbe4-47bd-80a9-d2610a560930",
+          "value": "fc79306c-cbe4-47bd-80a9-d2610a560930",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-17531.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-17531",
+          "value": "CVE-2019-17531",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-17531"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17531"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Unsafe deserialization in TcpServer",
+      "message": "Unsafe deserialization in TcpServer in org.apache.geode/geode-core",
+      "description": "A malicious user can send a network message to the Geode locator and execute code if certain classes are present on the classpath.",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:08ee7d04-c94e-4938-a745-ffdddab7bd3f",
+      "severity": "Critical",
+      "solution": "Upgrade to version 1.4.0 or higher. In addition, users should set the flag validate-serializable-objects.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-08ee7d04-c94e-4938-a745-ffdddab7bd3f",
+          "value": "08ee7d04-c94e-4938-a745-ffdddab7bd3f",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-15692.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-15692",
+          "value": "CVE-2017-15692",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15692"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3923"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/5a453c1543e66704d39c233aef0023a492860e579eb9d6b6ffb0c5c2@%3Cdev.geode.apache.org%3E"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Authorization bypass in JGroups",
+      "message": "Authorization bypass in JGroups in org.jgroups/jgroups",
+      "description": "JGroups before 4.0 does not require the proper headers for the ENCRYPT and AUTH protocols from nodes joining the cluster, which allows remote attackers to bypass security restrictions and send and receive messages within the cluster via unspecified vectors.",
+      "cve": "pom.xml:org.jgroups/jgroups:gemnasium:e03ae964-1815-4d53-8709-85335366d0c8",
+      "severity": "Critical",
+      "solution": "Upgrade to version 4.0 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.jgroups/jgroups"
+          },
+          "version": "3.6.10.Final"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-e03ae964-1815-4d53-8709-85335366d0c8",
+          "value": "e03ae964-1815-4d53-8709-85335366d0c8",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.jgroups/jgroups/CVE-2016-2141.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2016-2141",
+          "value": "CVE-2016-2141",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2141"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1313589"
+        },
+        {
+          "url": "https://issues.jboss.org/browse/JGRP-2021"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Deserialization of Untrusted Data",
+      "message": "Deserialization of Untrusted Data in com.fasterxml.jackson.core/jackson-databind",
+      "description": "FasterXML jackson-databind allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 and CVE-2017-17485 deserialization flaws. This is exploitable via two different gadgets that bypass a blacklist.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:0e5fec86-8e66-474c-9e93-b7e519017fe3",
+      "severity": "High",
+      "solution": "Upgrade to versions 2.8.11.1, 2.9.4 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-0e5fec86-8e66-474c-9e93-b7e519017fe3",
+          "value": "0e5fec86-8e66-474c-9e93-b7e519017fe3",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2018-5968.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2018-5968",
+          "value": "CVE-2018-5968",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-5968"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/1899"
+        },
+        {
+          "url": "https://security.netapp.com/advisory/ntap-20180423-0002/"
+        },
+        {
+          "url": "https://www.debian.org/security/2018/dsa-4114"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Information Exposure",
+      "message": "Information Exposure in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint, the service has the mysql-connector-java jar in the classpath, and an attacker can host a crafted MySQL server reachable by the victim, an attacker can send a crafted JSON message that allows them to read arbitrary local files on the server. This occurs because of missing `com.mysql.cj.jdbc.admin.MiniAdmin` validation.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:9df2bd87-497d-468f-8006-c980375634fa",
+      "severity": "High",
+      "solution": "Upgrade to versions 2.7.9.6, 2.8.11.4, 2.9.9 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-9df2bd87-497d-468f-8006-c980375634fa",
+          "value": "9df2bd87-497d-468f-8006-c980375634fa",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-12086.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-12086",
+          "value": "CVE-2019-12086",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12086"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://www.securityfocus.com/bid/109227"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12086"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Information Exposure",
+      "message": "Information Exposure in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. This occurs when Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint and the service has the logback jar in the classpath.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:ea403343-8d37-430d-9238-e27386f2843b",
+      "severity": "High",
+      "solution": "Upgrade to versions 2.7.9.6, 2.8.11.4, 2.9.9.2 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-ea403343-8d37-430d-9238-e27386f2843b",
+          "value": "ea403343-8d37-430d-9238-e27386f2843b",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-14439.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-14439",
+          "value": "CVE-2019-14439",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14439"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2389"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-14439"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Deserialization of Untrusted Data",
+      "message": "Deserialization of Untrusted Data in commons-beanutils/commons-beanutils",
+      "description": "In Apache Commons Beanutils, a special `BeanIntrospector` class was added which allows suppressing the ability for an attacker to access the classloader via the class property available on all Java objects. We, however were not using this by default characteristic of the PropertyUtilsBean.",
+      "cve": "pom.xml:commons-beanutils/commons-beanutils:gemnasium:b1794c16-e802-4be1-9778-372d79481103",
+      "severity": "High",
+      "solution": "Upgrade to version 1.9.4 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "commons-beanutils/commons-beanutils"
+          },
+          "version": "1.8.3"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-b1794c16-e802-4be1-9778-372d79481103",
+          "value": "b1794c16-e802-4be1-9778-372d79481103",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/commons-beanutils/commons-beanutils/CVE-2019-10086.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-10086",
+          "value": "CVE-2019-10086",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10086"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://mail-archives.apache.org/mod_mbox/www-announce/201908.mbox/%3cC628798F-315D-4428-8CB1-4ED1ECC958E4@apache.org%3e"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/3d1ed1a1596c08c4d5fea97b36c651ce167b773f1afc75251ce7a125@%3Ccommits.tinkerpop.apache.org%3E"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10086"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Class Loader manipulation via request parameters",
+      "message": "Class Loader manipulation via request parameters in commons-beanutils/commons-beanutils",
+      "description": "This package does not suppress the class property, which allows remote attackers to \"manipulate\" the ClassLoader and execute arbitrary code via the class parameter, as demonstrated by the passing of this parameter to the getClass method of the `ActionForm` object in Struts 1.",
+      "cve": "pom.xml:commons-beanutils/commons-beanutils:gemnasium:dc5c6ffc-f1f7-494c-9c53-735bfc54215d",
+      "severity": "High",
+      "solution": "Upgrade to the latest version",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "commons-beanutils/commons-beanutils"
+          },
+          "version": "1.8.3"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-dc5c6ffc-f1f7-494c-9c53-735bfc54215d",
+          "value": "dc5c6ffc-f1f7-494c-9c53-735bfc54215d",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/commons-beanutils/commons-beanutils/CVE-2014-0114.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2014-0114",
+          "value": "CVE-2014-0114",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0114"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://h30499.www3.hp.com/t5/HP-Security-Research-Blog/Protect-your-Struts1-applications/ba-p/6463188#.U2J7xeaSxro"
+        },
+        {
+          "url": "http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0114"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1091938"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Unsafe deserialization of application objects",
+      "message": "Unsafe deserialization of application objects in org.apache.geode/geode-core",
+      "description": "The Geode server stores application objects in serialized form. Certain cluster operations and API invocations cause these objects to be deserialized. An user with `DATA:WRITE` access to the cluster may be able to cause remote code execution if certain classes are present on the classpath. ",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:8caf475b-d9dc-456f-9d00-3ba468b928c6",
+      "severity": "High",
+      "solution": "Upgrade to version 1.4.0 or higher. In addition, users should set the flags validate-serializable-objects and serializable-object-filter.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-8caf475b-d9dc-456f-9d00-3ba468b928c6",
+          "value": "8caf475b-d9dc-456f-9d00-3ba468b928c6",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-15693.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-15693",
+          "value": "CVE-2017-15693",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15693"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3923"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/cc3ec1d06062f54fdaa0357874c1d148fc54bb955f2d2df4ca328a3d@%3Cuser.geode.apache.org%3E"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "OQL method invocation vulnerability",
+      "message": "OQL method invocation vulnerability in org.apache.geode/geode-core",
+      "description": "A malicious user with read access to specific regions within a Geode cluster may execute OQL queries that allow read and write access to objects within unauthorized regions. In addition a user could invoke methods that allow remote code execution.",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:ba155080-976b-44d3-803d-2bc35c024a13",
+      "severity": "High",
+      "solution": "Upgrade to 1.3.0 or later",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-ba155080-976b-44d3-803d-2bc35c024a13",
+          "value": "ba155080-976b-44d3-803d-2bc35c024a13",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-9795.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-9795",
+          "value": "CVE-2017-9795",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9795"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/apache/geode/pull/837"
+        },
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3247"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/0fc5ea3c1ea06fe7058a0ab56d593914b05f728a6c93c5a6755956c7@%3Cuser.geode.apache.org%3E"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Authentication bypass",
+      "message": "Authentication bypass in org.apache.geode/geode-core",
+      "description": "The Geode configuration service does not properly authorize configuration requests. This allows an unprivileged user who gains access to the Geode locator to extract configuration data and previously deployed application code.",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:c0f8561a-9cf5-4dd0-ac17-3a3d612d5b6d",
+      "severity": "High",
+      "solution": "Upgrade to version 1.4.0 or higher",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-c0f8561a-9cf5-4dd0-ac17-3a3d612d5b6d",
+          "value": "c0f8561a-9cf5-4dd0-ac17-3a3d612d5b6d",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-15696.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-15696",
+          "value": "CVE-2017-15696",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15696"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3962"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/28989e6ed0d3c29e46a489ae508302a50407a40691d5dc968f78cd3f@%3Cdev.geode.apache.org%3E"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "gfsh authorization vulnerability",
+      "message": "gfsh authorization vulnerability in org.apache.geode/geode-core",
+      "description": "When an authenticated user connects to a Geode cluster using the gfsh tool with HTTP, the user is able to obtain status information and control cluster members even without `CLUSTER:MANAGE` privileges.",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:cb0ab93a-2149-4f2c-b260-26e802e6be9d",
+      "severity": "High",
+      "solution": "Upgrade to 1.3.0 or later",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-cb0ab93a-2149-4f2c-b260-26e802e6be9d",
+          "value": "cb0ab93a-2149-4f2c-b260-26e802e6be9d",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-12622.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-12622",
+          "value": "CVE-2017-12622",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-12622"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/apache/geode/commit/db4a493efc09600bf0a9778d5274c09b23b16644"
+        },
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3685"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/560578479dabbdc93d0ee8746b7c857549202ef82f43aa22496aa589@%3Cuser.geode.apache.org%3E"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Information Disclosure",
+      "message": "Information Disclosure in com.fasterxml.jackson.core/jackson-databind",
+      "description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint and the service has JDOM in the classpath, an attacker can send a specifically crafted JSON message that allows them to read arbitrary local files on the server.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:64a8d8c4-3e77-4d6b-a195-f4e2f93d95fe",
+      "severity": "Medium",
+      "solution": "Upgrade to versions 2.7.9.6, 2.8.11.4, 2.9.9.1 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-64a8d8c4-3e77-4d6b-a195-f4e2f93d95fe",
+          "value": "64a8d8c4-3e77-4d6b-a195-f4e2f93d95fe",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-12814.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-12814",
+          "value": "CVE-2019-12814",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12814"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/FasterXML/jackson-databind/issues/2341"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2019/06/msg00019.html"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12814"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Deserialization of Untrusted Data",
+      "message": "Deserialization of Untrusted Data in com.fasterxml.jackson.core/jackson-databind",
+      "description": "FasterXML jackson-databind might allow attackers to have a variety of impacts by leveraging failure to block the `logback-core` class from polymorphic deserialization. Depending on the classpath content, remote code execution may be possible.",
+      "cve": "pom.xml:com.fasterxml.jackson.core/jackson-databind:gemnasium:ee5e6999-23b2-476b-ab3b-819a4e06724a",
+      "severity": "Medium",
+      "solution": "Upgrade to versions 2.7.9.6, 2.8.11.4, 2.9.9.1 or above.",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-ee5e6999-23b2-476b-ab3b-819a4e06724a",
+          "value": "ee5e6999-23b2-476b-ab3b-819a4e06724a",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/com.fasterxml.jackson.core/jackson-databind/CVE-2019-12384.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2019-12384",
+          "value": "CVE-2019-12384",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-12384"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12384"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "DoS by CPU exhaustion when using malicious SSL packets",
+      "message": "DoS by CPU exhaustion when using malicious SSL packets in io.netty/netty",
+      "description": "The `SslHandler` in this package allows remote attackers to cause a denial of service (infinite loop and CPU consumption) via a crafted `SSLv2Hello` message.",
+      "cve": "pom.xml:io.netty/netty:gemnasium:d1bf36d9-9f07-46cd-9cfc-8675338ada8f",
+      "severity": "Medium",
+      "solution": "Upgrade to the latest version",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "io.netty/netty"
+          },
+          "version": "3.9.1.Final"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-d1bf36d9-9f07-46cd-9cfc-8675338ada8f",
+          "value": "d1bf36d9-9f07-46cd-9cfc-8675338ada8f",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/io.netty/netty/CVE-2014-3488.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2014-3488",
+          "value": "CVE-2014-3488",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3488"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://netty.io/news/2014/06/11/3.html"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/CVE-2014-3488"
+        },
+        {
+          "url": "https://github.com/netty/netty/issues/2562"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "OQL bind parameter vulnerability",
+      "message": "OQL bind parameter vulnerability in org.apache.geode/geode-core",
+      "description": "A malicious user with read access to specific regions within a Geode cluster may execute OQL queries containing a region name as a bind parameter that allow read access to objects within unauthorized regions.",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:0932979e-c712-438e-9b9c-d6bf97f075a9",
+      "severity": "Medium",
+      "solution": "Upgrade to 1.3.0 or later",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-0932979e-c712-438e-9b9c-d6bf97f075a9",
+          "value": "0932979e-c712-438e-9b9c-d6bf97f075a9",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-9796.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-9796",
+          "value": "CVE-2017-9796",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9796"
+        }
+      ],
+      "links": [
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3248"
+        }
+      ]
+    },
+    {
+      "category": "dependency_scanning",
+      "name": "Metadata modification vulnerability",
+      "message": "Metadata modification vulnerability in org.apache.geode/geode-core",
+      "description": "When an Apache Geode server is operating in secure mode, a user with write permissions for specific data regions can modify internal cluster metadata. A malicious user could modify this data in a way that affects the operation of the cluster.",
+      "cve": "pom.xml:org.apache.geode/geode-core:gemnasium:13fcc46f-85b8-479b-be4a-f01c9f97fac4",
+      "severity": "Medium",
+      "solution": "Upgrade to fixed version",
+      "scanner": {
+        "id": "gemnasium",
+        "name": "Gemnasium"
+      },
+      "location": {
+        "file": "pom.xml",
+        "dependency": {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        }
+      },
+      "identifiers": [
+        {
+          "type": "gemnasium",
+          "name": "Gemnasium-13fcc46f-85b8-479b-be4a-f01c9f97fac4",
+          "value": "13fcc46f-85b8-479b-be4a-f01c9f97fac4",
+          "url": "https://gitlab.com/gitlab-org/security-products/gemnasium-db/-/blob/2020-01-15/maven/org.apache.geode/geode-core/CVE-2017-15694.yml"
+        },
+        {
+          "type": "cve",
+          "name": "CVE-2017-15694",
+          "value": "CVE-2017-15694",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15694"
+        }
+      ],
+      "links": [
+        {
+          "url": "http://www.securityfocus.com/bid/108870"
+        },
+        {
+          "url": "https://issues.apache.org/jira/browse/GEODE-3981"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/311505e7b7a045aaa246f0a1935703acacf41b954621b1363c40bf6f@%3Cuser.geode.apache.org%3E"
+        },
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-15694"
+        }
+      ]
+    }
+  ],
+  "remediations": [],
+  "dependency_files": [
+    {
+      "path": "pom.xml",
+      "package_manager": "maven",
+      "dependencies": [
+        {
+          "package": {
+            "name": "antlr/antlr"
+          },
+          "version": "2.7.7"
+        },
+        {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-annotations"
+          },
+          "version": "2.9.0"
+        },
+        {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-core"
+          },
+          "version": "2.9.2"
+        },
+        {
+          "package": {
+            "name": "com.fasterxml.jackson.core/jackson-databind"
+          },
+          "version": "2.9.2"
+        },
+        {
+          "package": {
+            "name": "com.github.stephenc.findbugs/findbugs-annotations"
+          },
+          "version": "1.3.9-1"
+        },
+        {
+          "package": {
+            "name": "commons-beanutils/commons-beanutils"
+          },
+          "version": "1.8.3"
+        },
+        {
+          "package": {
+            "name": "commons-io/commons-io"
+          },
+          "version": "2.3"
+        },
+        {
+          "package": {
+            "name": "commons-lang/commons-lang"
+          },
+          "version": "2.5"
+        },
+        {
+          "package": {
+            "name": "io.netty/netty"
+          },
+          "version": "3.9.1.Final"
+        },
+        {
+          "package": {
+            "name": "it.unimi.dsi/fastutil"
+          },
+          "version": "7.0.2"
+        },
+        {
+          "package": {
+            "name": "javax.resource/javax.resource-api"
+          },
+          "version": "1.7"
+        },
+        {
+          "package": {
+            "name": "javax.transaction/javax.transaction-api"
+          },
+          "version": "1.2"
+        },
+        {
+          "package": {
+            "name": "junit/junit"
+          },
+          "version": "3.8.1"
+        },
+        {
+          "package": {
+            "name": "net.java.dev.jna/jna"
+          },
+          "version": "4.0.0"
+        },
+        {
+          "package": {
+            "name": "net.sf.jopt-simple/jopt-simple"
+          },
+          "version": "5.0.1"
+        },
+        {
+          "package": {
+            "name": "org.apache.commons/commons-lang3"
+          },
+          "version": "3.4"
+        },
+        {
+          "package": {
+            "name": "org.apache.geode/geode-common"
+          },
+          "version": "1.1.1"
+        },
+        {
+          "package": {
+            "name": "org.apache.geode/geode-core"
+          },
+          "version": "1.1.1"
+        },
+        {
+          "package": {
+            "name": "org.apache.geode/geode-json"
+          },
+          "version": "1.1.1"
+        },
+        {
+          "package": {
+            "name": "org.apache.logging.log4j/log4j-api"
+          },
+          "version": "2.6.1"
+        },
+        {
+          "package": {
+            "name": "org.apache.logging.log4j/log4j-core"
+          },
+          "version": "2.6.1"
+        },
+        {
+          "package": {
+            "name": "org.apache.maven/maven-artifact"
+          },
+          "version": "3.3.9"
+        },
+        {
+          "package": {
+            "name": "org.apache.shiro/shiro-core"
+          },
+          "version": "1.3.1"
+        },
+        {
+          "package": {
+            "name": "org.codehaus.plexus/plexus-utils"
+          },
+          "version": "3.0.22"
+        },
+        {
+          "package": {
+            "name": "org.hamcrest/hamcrest-core"
+          },
+          "version": "1.1"
+        },
+        {
+          "package": {
+            "name": "org.javassist/javassist"
+          },
+          "version": "3.21.0-GA"
+        },
+        {
+          "package": {
+            "name": "org.jgroups/jgroups"
+          },
+          "version": "3.6.10.Final"
+        },
+        {
+          "package": {
+            "name": "org.mockito/mockito-core"
+          },
+          "version": "1.10.19"
+        },
+        {
+          "package": {
+            "name": "org.mozilla/rhino"
+          },
+          "version": "1.7.10"
+        },
+        {
+          "package": {
+            "name": "org.objenesis/objenesis"
+          },
+          "version": "2.1"
+        },
+        {
+          "package": {
+            "name": "org.powermock/powermock-api-mockito"
+          },
+          "version": "1.7.3"
+        },
+        {
+          "package": {
+            "name": "org.powermock/powermock-api-mockito-common"
+          },
+          "version": "1.7.3"
+        },
+        {
+          "package": {
+            "name": "org.powermock/powermock-api-support"
+          },
+          "version": "1.7.3"
+        },
+        {
+          "package": {
+            "name": "org.powermock/powermock-core"
+          },
+          "version": "1.7.3"
+        },
+        {
+          "package": {
+            "name": "org.powermock/powermock-reflect"
+          },
+          "version": "1.7.3"
+        },
+        {
+          "package": {
+            "name": "org.slf4j/slf4j-api"
+          },
+          "version": "1.6.4"
+        }
+      ]
+    }
+  ]
+}
