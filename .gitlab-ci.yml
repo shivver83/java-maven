@@ -1,6 +1,18 @@
+variables:
+  # This will suppress any download for dependencies and plugins or upload messages which would clutter the console log.
+  # `showDateTime` will show the passed time in milliseconds. You need to specify `--batch-mode` to make this work.
+  MAVEN_OPTS: "-Dhttps.protocols=TLSv1.2 -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  # As of Maven 3.3.0 instead of this you may define these options in `.mvn/maven.config` so the same config is used
+  # when running from the command line.
+  # `installAtEnd` and `deployAtEnd` are only effective with recent version of the corresponding plugins.
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
 # These are the default stages.
 # You don't need to explicitly define them.
 # But you could define any stages you want.
+cache:
+  paths:
+  - .m2/repository
+
 stages:
   - build
   - test
@@ -20,10 +32,28 @@ maven_build:
     - ci
   # Here you can execute arbitrate terminal commands.
   # If any of the commands returns a non zero exit code the job fails.
+  variables:
+     SYSTEM: "syncom-it3"
+  before_script:
+  ##
+  ## Assuming you created the SSH_KNOWN_HOSTS variable, uncomment the
+  ## following two lines.
+  ##
+   - echo "$SSH_KNOWN_HOSTS" >> C:\Users\syncom-it3\.ssh\known_hosts
+   - chmod 644 C:\Users\syncom-it3\.ssh\known_hosts
   script:
     - echo "Building project with maven on gitlab ci "
     - SETX JAVA_HOME "C:\Program Files\Java\jdk1.8.0_191"
     - echo $Env:JAVA_HOME
     - DIR
-    - mvn verify
-
+  ##  - mvn verify
+    - mvn deploy -s ci_settings.xml
+    - cd C:\Users\syncom-it3\.ssh
+    - DIR
+    - chmod 644 C:\Users\syncom-it3\.ssh\known_hosts
+    - ssh -o StrictHostKeyChecking=no -i id_rsa_pri oracle@20.186.17.157 'sh /home/oracle/working_demo/sample.sh'
+    - scp -o StrictHostKeyChecking=no -i id_rsa_pri oracle@20.186.17.157:/home/oracle/working_demo/sample.pdf .
+    - DIR
+  
+    
+ 
